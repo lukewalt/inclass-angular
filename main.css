@@ -11,3 +11,15 @@ ul {
 h1 {
     font-size: 4em;
 }
+
+.btn {
+    width: 90px;
+    border: 1px solid springgreen;
+    background-color: white;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+a {
+    color: #008cff;
+}
