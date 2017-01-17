@@ -1,7 +1,7 @@
 console.log("hey");
 
 
-var app = angular.module("MonkeyButtApp", ['ngRoute'])
+var app = angular.module("nameOfApp", ['ngRoute'])
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
             controller: 'ListCtrl',
             templateUrl: 'partials/list.html'
         })
-        .when('/list/:listVar', {
+        .when('/list/:someVariable', {
             controller: "DetailCtrl",
             templateUrl: "partials/detail.html"
         })
@@ -26,10 +26,7 @@ app.config(function($routeProvider) {
 // -------------------- MAIN --------------------------
 
 app.controller('MainCrtl', function($scope){
-    $scope.potatoes = "baked";
-    $scope.steak = "yum";
-    $scope.number = 21;
-    $scope.obj = {1: "hap"}
+    $scope.myVaribable = "main ctrl varibale"
     $scope.functionThing = function(arg){
         console.log(arg);
         $scope.print = arg
@@ -54,7 +51,13 @@ app.controller('ListCtrl', function($scope, $http){
 
 app.controller('DetailCtrl', function($scope, $routeParams, $http){
     console.log("DetailCtrl");
-    $scope.listVar = $routeParams.listVar
+    //saves variable in router to a scoped variable in the controller
+    $scope.thatNumber = $routeParams.someVariable
 
-
+    $http.get(`list.json`)
+    .then(function(val){
+        let list = val.data.list
+        console.log(list);
+        $scope.selectedItem = list[$scope.thatNumber]
+    })
 })
