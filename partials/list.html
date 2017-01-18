@@ -1,4 +1,4 @@
-<h1>This is the list view</h1>
+<h3>This is the list view</h3>
 <a href="/">Back to main view</a>
 
 <h2 ng-if="thatNumber">That number is {{thatNumber}}</h2>
@@ -11,7 +11,7 @@
 </ul>
 
 
-<h3>MORE Awesome things about angular</h3>
+<h3>Details Awesome things about angular</h3>
 <h5 ng-if="list.length == 3">There are three of them!</h5>
 <ul>
   <li ng-repeat="listItem in list"><a href="/#!/list/{{listItem.id}}">{{listItem.id}}</a></li>
@@ -39,3 +39,6 @@
     <li>create directive(s) -- optional</li>
   </ul>
 </ul>
+
+
+<p>{{factoryThing}}</p>
