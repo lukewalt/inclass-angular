@@ -20,6 +20,12 @@ h1 {
 
 }
 
+p {
+    font-family: 'Glegoo', serif;
+    font-size: 2em;
+}
+
 a {
+    font-family: 'Glegoo', serif;
     color: #008cff;
 }
