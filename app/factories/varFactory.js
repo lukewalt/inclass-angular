@@ -1,7 +1,6 @@
 app.factory('varFactory', function(){
-    let bologna;
+    let bologna = " ";
     return {
-
         getThatVar: () => {
             return bologna
         },
@@ -11,6 +10,9 @@ app.factory('varFactory', function(){
     }
 
 })
+
+
+
 
 
 /*

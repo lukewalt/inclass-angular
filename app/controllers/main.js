@@ -13,5 +13,6 @@ app.controller('MainCrtl', function($scope, varFactory){
     $scope.setter = (newVal) => {
         varFactory.setThatVar(newVal)
         console.log("NEW VAL", newVal);
+        $scope.messageFromFactory = newVal
     }
 })

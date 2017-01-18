@@ -3,7 +3,8 @@
 // -------------------- DETAIL --------------------------
 
 app.controller('DetailCtrl', function($scope, $routeParams, $http, varFactory){
-    console.log("DetailCtrl");
+    varFactory.setThatVar("PERSON")
+    console.log(varFactory.getThatVar());
     //saves variable in router to a scoped variable in the controller
     $scope.thatNumber = $routeParams.someVariable
     $scope.factoryThing = varFactory.getThatVar() + " GO TO FACTORY"
