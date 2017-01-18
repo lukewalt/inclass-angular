@@ -1,7 +1,24 @@
 app.factory('varFactory', function(){
+    let bologna;
     return {
+
         getThatVar: () => {
-            return "item from Factory!"
+            return bologna
+        },
+        setThatVar: (newVal) => {
+            bologna = newVal
         }
     }
+
 })
+
+
+/*
+ #     # ####### ######  #######    ###       #    #     #
+ #     # #       #     # #           #       # #   ##   ##
+ #     # #       #     # #           #      #   #  # # # #
+ ####### #####   ######  #####       #     #     # #  #  #
+ #     # #       #   #   #           #     ####### #     #
+ #     # #       #    #  #           #     #     # #     #
+ #     # ####### #     # #######    ###    #     # #     #
+*/
